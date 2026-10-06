@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="UAE Tech Skills & Projects — collaborative UAE-focused technology learning and portfolio group.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="UAE Tech Skills & Projects">
+<meta property="og:description" content="A UAE-focused collaborative technology learning and portfolio initiative.">
+<meta property="og:type" content="website">
+<title>UAE Tech Skills & Projects | Team & Strategy</title>
+<style>
+  :root {
+    --ink:#162235; --muted:#657186; --surface:#ffffff; --soft:#f4f7fb;
+    --brand:#0b6bcb; --brand2:#5b45d6; --accent:#00a78e; --line:#dfe7f0;
+    --shadow:0 18px 45px rgba(20,38,70,.10); --radius:22px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--soft);line-height:1.65}
+  a{color:var(--brand);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:auto;padding:0 24px}
+  .hero{background:
+      radial-gradient(circle at 10% 15%,rgba(255,255,255,.18),transparent 28%),
+      linear-gradient(125deg,#073b72 0%,#0b6bcb 48%,#5b45d6 100%);
+      color:white;padding:82px 0 68px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-100px;top:-120px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  h1{font-size:clamp(38px,6vw,72px);line-height:1.02;margin:20px 0 18px;max-width:850px;letter-spacing:-.045em}
+  .hero p{font-size:19px;max-width:760px;color:rgba(255,255,255,.88);margin:0}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:750}
+  .btn.primary{background:white;color:#0b4c91}
+  .btn.ghost{border:1px solid rgba(255,255,255,.35);color:white}
+  nav{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
+  nav .wrap{display:flex;gap:22px;align-items:center;overflow:auto;padding-top:14px;padding-bottom:14px}
+  nav a{white-space:nowrap;font-size:14px;font-weight:700;color:#35435a}
+  section{padding:72px 0}
+  .section-head{max-width:800px;margin-bottom:30px}
+  .kicker{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--brand)}
+  h2{font-size:clamp(28px,4vw,44px);line-height:1.12;letter-spacing:-.03em;margin:8px 0 12px}
+  h3{line-height:1.25;margin:0}
+  .lead{font-size:18px;color:var(--muted);margin:0}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .info-card{background:var(--surface);padding:24px;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 25px rgba(20,38,70,.05)}
+  .info-card .num{font-size:13px;font-weight:850;color:var(--brand);margin-bottom:8px}
+  .info-card p{color:var(--muted);margin:8px 0 0}
+  .status{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch}
+  .status-main{background:#10243e;color:white;padding:32px;border-radius:var(--radius);box-shadow:var(--shadow)}
+  .status-main .pill{display:inline-block;background:#ffe9a7;color:#5e4800;font-weight:850;padding:6px 10px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+  .status-main p{color:#cbd8e7}
+  .status-list{background:white;border:1px solid var(--line);padding:28px;border-radius:var(--radius)}
+  .status-list ul{margin:0;padding-left:20px;color:var(--muted)}
+  .capabilities{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .capabilities span,.tags span,.member-chip{padding:7px 10px;border-radius:999px;background:#eaf2fb;color:#23415e;font-size:12px;font-weight:700;border:1px solid #d6e5f4}
+  .profiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .profile-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;gap:18px;box-shadow:0 8px 25px rgba(20,38,70,.045)}
+  .profile-card.featured{border-color:#bddaf7}
+  .avatar{width:54px;height:54px;min-width:54px;border-radius:18px;background:linear-gradient(135deg,#0b6bcb,#5b45d6);color:white;display:grid;place-items:center;font-size:16px;font-weight:850;letter-spacing:.03em}
+  .photo-avatar{overflow:hidden;background:#edf3fa}
+  .photo-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .profile-top{display:flex;justify-content:space-between;gap:10px;align-items:start}
+  .badge{font-size:11px;font-weight:850;color:#045e51;background:#d9f6ef;padding:5px 8px;border-radius:999px;white-space:nowrap}
+  .badge.muted{color:#5c6572;background:#eef1f5}
+  .role{color:var(--brand);font-weight:800;margin:5px 0 8px}
+  .profile-card p:not(.role):not(.profile-link){color:var(--muted);margin:0}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}
+  .tags span{font-size:11px;padding:5px 8px}
+  .profile-link{margin:12px 0 0;font-weight:700;font-size:13px}
+  .linkedin-btn{display:inline-flex;align-items:center;gap:5px;padding:8px 11px;border-radius:10px;background:#0a66c2;color:white!important;font-weight:800;text-decoration:none!important}
+  .linkedin-btn:hover{filter:brightness(.94);text-decoration:none!important}
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:steps}
+  .step{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;counter-increment:steps}
+  .step:before{content:counter(steps);display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#e9f2fc;color:var(--brand);font-weight:900;margin-bottom:14px}
+  .step p{color:var(--muted);margin:7px 0 0}
+  .deliverables{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .deliverable{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+  .deliverable strong{display:block;margin-bottom:5px}
+  .deliverable span{font-size:13px;color:var(--muted)}
+  .directory{display:flex;flex-wrap:wrap;gap:8px}
+  .member-chip{background:white}
+  .note{margin-top:18px;padding:16px 18px;background:#fff7dc;border:1px solid #f2dd90;border-radius:14px;color:#6a5520;font-size:14px}
+  .cta{background:linear-gradient(125deg,#092f59,#0b6bcb);color:white;border-radius:26px;padding:34px;display:flex;justify-content:space-between;gap:30px;align-items:center}
+  .cta p{color:#cfe1f4;margin:8px 0 0;max-width:700px}
+  footer{padding:32px 0 50px;color:#758196;font-size:13px}
+  @media(max-width:900px){
+    .grid-3,.timeline{grid-template-columns:1fr 1fr}
+    .status,.profiles{grid-template-columns:1fr}
+    .deliverables{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    .hero{padding:58px 0 48px}
+    section{padding:54px 0}
+    .grid-3,.timeline,.deliverables{grid-template-columns:1fr}
+    .profile-card{flex-direction:column}
+    .profile-top{display:block}
+    .badge{display:inline-block;margin-top:7px}
+    .cta{display:block}
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">UAE collaborative technology initiative</span>
+    <h1>UAE Tech Skills &amp; Projects</h1>
+    <p>A community building real UAE-focused project experience together — combining business understanding, software engineering, data, AI, analytics, cloud, quality and product thinking.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#team">Meet the team</a>
+      <a class="btn ghost" href="#strategy">See our strategy</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#about">About</a><a href="#status">Current Status</a><a href="#team">Team</a>
+    <a href="#strategy">Strategy</a><a href="#deliverables">Deliverables</a><a href="#community">Community</a>
+  </div>
+</nav>
+
+<main>
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">About the group</div>
+      <h2>Learning together by building something real.</h2>
+      <p class="lead">UAE Tech Skills &amp; Projects is a voluntary collaborative learning and portfolio-building group. The aim is to bridge career and experience gaps by working like a real cross-functional technology team, not by studying in isolation.</p>
+    </div>
+    <div class="grid-3">
+      <div class="info-card"><div class="num">01 · REAL BUSINESS CONTEXT</div><h3>Problem before technology</h3><p>We first identify a genuine UAE business problem, target users and measurable pain points before deciding what to build.</p></div>
+      <div class="info-card"><div class="num">02 · CROSS-FUNCTIONAL DELIVERY</div><h3>One project, many disciplines</h3><p>Business analysis, product, software, data, Power BI, AI/ML, cloud, QA and project management work together in one delivery cycle.</p></div>
+      <div class="info-card"><div class="num">03 · CAREER EVIDENCE</div><h3>Build proof, not only certificates</h3><p>The finished work should become practical evidence for GitHub, LinkedIn, interviews, case studies and future UAE opportunities.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="status">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Where we are now</div>
+      <h2>The project domain is intentionally not final yet.</h2>
+    </div>
+    <div class="status">
+      <div class="status-main">
+        <span class="pill">Discovery Stage</span>
+        <h2>Choose the right problem first.</h2>
+        <p>The team is currently mapping skills, preferred domains and access to real subject-matter experts. The next decision is to select a UAE-relevant domain and validate one concrete business problem before defining the final product or service.</p>
+        <div class="capabilities">
+          <span>Logistics</span><span>Banking / FinTech</span><span>Travel</span><span>Energy</span>
+          <span>Sustainability</span><span>Manufacturing</span><span>Water / Environment</span><span>Other UAE sectors</span>
+        </div>
+      </div>
+      <div class="status-list">
+        <h3>Current decision criteria</h3>
+        <ul>
+          <li>Is the problem relevant to the UAE market?</li>
+          <li>Can we speak to a business owner, professional or subject-matter expert?</li>
+          <li>Does it cover important skill gaps across the team?</li>
+          <li>Can we deliver a credible MVP in a manageable timeframe?</li>
+          <li>Will it create strong portfolio and interview evidence?</li>
+          <li>Could it later become a useful product or implementation service?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Team profiles</div>
+      <h2>Different backgrounds. Shared objective.</h2>
+      <p class="lead">These bios are based only on introductions shared in the group. Roles are provisional and can change after the domain, business problem and MVP are finalized.</p>
+    </div>
+    <div class="profiles">
+      
+<article class="profile-card featured">
+  <div class="avatar photo-avatar">
+    <img src="images/shahnaz-profile-placeholder.svg" alt="Shahnaz Azam profile photo placeholder">
+  </div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Shahnaz Azam</h3><span class="badge">Group Initiator</span></div>
+    <p class="role">Data • Data Engineering • Analytics</p>
+    <p>Around seven years of IT experience, including Application Team Lead experience. Her technical background includes .NET, Java, Python, Oracle and SQL Server. She is returning to IT after a career gap and is focusing on databases, data engineering and analytics.</p>
+    <div class="tags"><span>.NET</span><span>Java</span><span>Python</span><span>Oracle</span><span>SQL Server</span><span>Data</span></div>
+    <p class="profile-link"><a class="linkedin-btn" href="https://www.linkedin.com/in/shahnaz-azam" target="_blank" rel="noopener noreferrer" aria-label="View Shahnaz Azam on LinkedIn">in&nbsp;&nbsp;View LinkedIn Profile ↗</a></p>
+  </div>
+</article>
+
+<article class="profile-card featured">
+  <div class="avatar">P</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Priya</h3><span class="badge">Current Coordination</span></div>
+    <p class="role">Project Management • QA • Team Coordination</p>
+    <p>PMP-certified professional with previous experience as a Lead QA Engineer, including work with Deloitte and two startups in India. She is currently helping organize the team through polls, kickoff planning, documentation, coordination and delivery structure.</p>
+    <div class="tags"><span>PMP</span><span>Project Management</span><span>QA</span><span>Planning</span><span>Documentation</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">Z</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Zsuzsanna</h3><span class="badge">Business / Technology</span></div>
+    <p class="role">Business Analysis • AI • Process Improvement</p>
+    <p>Former software architect and development team lead with a strong technical background. Her current focus is helping businesses improve processes and make better use of technology, with a particular interest in AI and practical business solutions.</p>
+    <div class="tags"><span>Business Analysis</span><span>Architecture</span><span>AI</span><span>Process Improvement</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">FJ</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Farheena Jawed</h3><span class="badge">Software Engineering</span></div>
+    <p class="role">Software Engineering • Continuous Learning • Market Validation</p>
+    <p>Software engineer actively upskilling through online learning and practical study. She joined the group to turn learning into real project experience and has also offered to help connect the team with market contacts who may validate real business problems.</p>
+    <div class="tags"><span>Software Engineering</span><span>Learning</span><span>Business Validation</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">S</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Sabitha</h3><span class="badge">Data</span></div>
+    <p class="role">Data Analysis • Data Engineering • AI</p>
+    <p>Started her career as a Software Developer, moved into Database Development, and has worked as a freelance Data Analyst for the past three years. She has lived in the UAE for more than 16 years and is currently upskilling in AI while targeting AI and Data Engineering opportunities.</p>
+    <div class="tags"><span>Data Analysis</span><span>Database Development</span><span>AI</span><span>Data Engineering</span></div>
+    <p class="profile-link"><a href="https://www.linkedin.com/in/sabithapu" target="_blank" rel="noopener">LinkedIn profile ↗</a></p>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">BE</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Backend Engineering Contributor</h3><span class="badge muted">Name to confirm</span></div>
+    <p class="role">Java • Spring Boot • Microservices</p>
+    <p>Backend developer with five years of experience in Java, J2EE, Spring, Spring Boot, Microservices, Hibernate and REST APIs. Interested in contributing as the Java backend developer for the project.</p>
+    <div class="tags"><span>Java</span><span>Spring Boot</span><span>Microservices</span><span>REST APIs</span><span>Hibernate</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">MD</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Mobile Development Contributor</h3><span class="badge muted">Name to confirm</span></div>
+    <p class="role">Mobile Development • Full-Stack Learning</p>
+    <p>Mobile application developer with more than ten years of experience. Currently expanding toward full-stack development by learning API creation and backend technologies.</p>
+    <div class="tags"><span>Mobile</span><span>APIs</span><span>Backend Learning</span><span>Full Stack</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">PO</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Product Owner Contributor</h3><span class="badge muted">Name to confirm</span></div>
+    <p class="role">Product Ownership • Use Cases • Requirements</p>
+    <p>Certified Product Owner who has offered to help elaborate the product, define use cases and structure requirements once the group selects a domain and validates a business problem.</p>
+    <div class="tags"><span>Product Ownership</span><span>Requirements</span><span>Use Cases</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">EP</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Enterprise Planning Contributor</h3><span class="badge muted">Name to confirm</span></div>
+    <p class="role">Enterprise Planning • Reporting • AI Upskilling</p>
+    <p>IT professional with more than eight years of experience in India, including enterprise planning management and reporting. Interested in using the project to build practical AI skills.</p>
+    <div class="tags"><span>Enterprise Planning</span><span>Reporting</span><span>AI Learning</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">BIO</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Biotechnology & Scientific Writing Contributor</h3><span class="badge muted">Name to confirm</span></div>
+    <p class="role">Biotechnology • Scientific Writing • Power BI • AI</p>
+    <p>Comes from a biotechnology and scientific writing background and is currently learning Power BI and AI. Interested in contributing wherever her domain and communication strengths can support the team.</p>
+    <div class="tags"><span>Biotechnology</span><span>Scientific Writing</span><span>Power BI</span><span>AI Learning</span></div>
+  </div>
+</article>
+
+<article class="profile-card">
+  <div class="avatar">CE</div>
+  <div class="profile-content">
+    <div class="profile-top"><h3>Chemical Engineering Contributor</h3><span class="badge muted">Name to confirm</span></div>
+    <p class="role">Process / R&D • Sustainability • Energy • Water</p>
+    <p>Chemical engineering professional with process and R&D experience. Interested in process optimisation, sustainability, energy, water and industrial applications, and in applying AI and data skills to real engineering and business problems.</p>
+    <div class="tags"><span>Process Optimisation</span><span>R&amp;D</span><span>Sustainability</span><span>Energy</span><span>Water</span><span>AI/Data</span></div>
+  </div>
+</article>
+
+    </div>
+    <div class="note"><strong>Profile update:</strong> Members shown as “Name to confirm” shared their technical background in the chat but did not provide a name in the exported history. Their cards can be updated as soon as the team confirms the names and preferred bios.</div>
+  </div>
+</section>
+
+<section id="strategy">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">How we will work</div>
+      <h2>Our project strategy</h2>
+      <p class="lead">The team will move from business discovery to a validated MVP, then turn the result into a reusable portfolio and career asset.</p>
+    </div>
+    <div class="timeline">
+      <div class="step"><h3>Map the team</h3><p>Confirm the core team, availability, preferred roles, backup roles and learning goals.</p></div>
+      <div class="step"><h3>Select a domain</h3><p>Compare domains against UAE opportunity, team fit, access to domain knowledge and MVP feasibility.</p></div>
+      <div class="step"><h3>Validate a problem</h3><p>Interview a business owner or subject-matter expert and document who has the problem, how it is handled today and why it is inefficient.</p></div>
+      <div class="step"><h3>Define the MVP</h3><p>Create a problem statement, personas, requirements, user stories, storyboard, data needs, architecture and success measures.</p></div>
+      <div class="step"><h3>Build in sprints</h3><p>Use GitHub, weekly meetings, task ownership, code reviews, testing and demo checkpoints to work like a real delivery team.</p></div>
+      <div class="step"><h3>Showcase the outcome</h3><p>Deploy the product, publish documentation, dashboards and demo material, and create individual portfolio evidence for each contributor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="deliverables">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">What success should produce</div>
+      <h2>End-to-end portfolio evidence</h2>
+    </div>
+    <div class="deliverables">
+      <div class="deliverable"><strong>Business Case</strong><span>Problem statement, target users, process map and measurable goals.</span></div>
+      <div class="deliverable"><strong>Product Definition</strong><span>Requirements, backlog, user stories, storyboard and MVP scope.</span></div>
+      <div class="deliverable"><strong>Software Product</strong><span>Frontend/mobile, APIs, backend services and database.</span></div>
+      <div class="deliverable"><strong>Data Platform</strong><span>Data model, pipelines, transformations and analytics-ready datasets.</span></div>
+      <div class="deliverable"><strong>Analytics</strong><span>Power BI dashboards and operational/business KPIs.</span></div>
+      <div class="deliverable"><strong>AI Capability</strong><span>ML, forecasting, RAG, document intelligence or agentic workflow where justified.</span></div>
+      <div class="deliverable"><strong>Quality &amp; Delivery</strong><span>Testing, QA evidence, CI/CD, cloud deployment and monitoring.</span></div>
+      <div class="deliverable"><strong>Career Showcase</strong><span>GitHub repository, architecture, case study, demo video and LinkedIn material.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="community">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Community directory</div>
+      <h2>Members visible in the current group history</h2>
+      <p class="lead">Detailed bios will be added as members submit a short introduction, target role, key skills and LinkedIn profile.</p>
+    </div>
+    <div class="directory"><span class="member-chip">Priya</span>
+<span class="member-chip">Araceli - From Goshopia</span>
+<span class="member-chip">Kamelia El boury</span>
+<span class="member-chip">Farheena Jawed</span>
+<span class="member-chip">Swati H</span>
+<span class="member-chip">Aa&#x27;esha</span>
+<span class="member-chip">Shabna Thajudeen</span>
+<span class="member-chip">Sabitha</span>
+<span class="member-chip">Samrah Abbas Botim</span>
+<span class="member-chip">ShaziaSaif Intiquab</span>
+<span class="member-chip">Shereena</span>
+<span class="member-chip">Meenakshee</span>
+<span class="member-chip">Dhivya</span>
+<span class="member-chip">Anam</span>
+<span class="member-chip">Jennifer TydingsWashbrook</span>
+<span class="member-chip">Rubab Jawaad</span>
+<span class="member-chip">Aditee</span>
+<span class="member-chip">Nargis Raza</span>
+<span class="member-chip">Nausheen</span>
+<span class="member-chip">Shubhangi Patil</span>
+<span class="member-chip">cheri favel</span>
+<span class="member-chip">Sonali</span>
+<span class="member-chip">Cristina</span>
+<span class="member-chip">Ginju</span>
+<span class="member-chip">A</span>
+<span class="member-chip">Pr@th!bh@ Bh@t $</span>
+<span class="member-chip">Ami Rasheed</span>
+<span class="member-chip">shefa</span>
+<span class="member-chip">Lyra</span>
+<span class="member-chip">زينب</span>
+<span class="member-chip">one day</span></div>
+    <div class="note">For a public website, publish a member’s name, photo, LinkedIn URL or contact details only after that member agrees to have the information displayed.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>One team. One validated UAE problem. One strong portfolio project.</h2>
+        <p>The immediate goal is not to rush into coding. It is to choose a meaningful business problem, define it correctly, and then build an end-to-end solution that gives every contributor useful real-project evidence.</p>
+      </div>
+      <a class="btn primary" href="#status">View current stage</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>UAE Tech Skills &amp; Projects</strong><br>
+    Collaborative learning and portfolio initiative • UAE • 2026<br>
+    <span>This page is a working team profile. Project domain, roles and member details remain subject to team confirmation.</span>
+  </div>
+</footer>
+</body>
+</html>
